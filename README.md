@@ -23,15 +23,14 @@ uvicorn main:app --reload --port 8000
 - ML Service: Python, FastAPI, PyTorch, YOLOv8
 
 ## Project Structure
+```text
 petlink web app/
-├── src/                  # Frontend source code
-├── petlink-ml/           # ML matching service
-│   ├── main.py           # FastAPI endpoints
-│   ├── ml.py              # Matching logic
-│   └── requirements.txt
+├── src/ # Frontend source code
+├── petlink-ml/ # ML matching service
+│   ├── main.py # FastAPI endpoints
+│   ├── ml.py # Matching logic
+│   ├── requirements.txt
 └── README.md
-
-
 
 
 
