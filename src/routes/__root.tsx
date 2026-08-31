@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+﻿import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -71,14 +71,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
-      { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PawTrack — Help Pets Find Their Home" },
+      { title: "Petlink — Help Pets Find Their Home" },
       {
         name: "description",
         content: "Community-driven platform to reunite lost pets with their families.",
       },
-      { property: "og:title", content: "PawTrack — Help Pets Find Their Home" },
+      { property: "og:title", content: "Petlink — Help Pets Find Their Home" },
       {
         property: "og:description",
         content: "Community-driven platform to reunite lost pets with their families.",
@@ -106,6 +105,7 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <meta charSet="UTF-8" />
         <HeadContent />
       </head>
       <body>
@@ -126,3 +126,4 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
+

@@ -1,4 +1,4 @@
-export const SITE_NAME = "PawTrack";
+export const SITE_NAME = "Petlink";
 
 export const NAV_LINKS = [
   { to: "/", label: "Home" },

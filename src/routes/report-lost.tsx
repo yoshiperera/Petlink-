@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { LogIn } from "lucide-react";
 import { MainLayout } from "@/layouts/MainLayout";
 import { ReportPetForm } from "@/components/pets/ReportPetForm";
@@ -7,7 +7,7 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/report-lost")({
   head: () => ({
     meta: [
-      { title: "Report a Lost Pet — PawTrack" },
+      { title: "Report a Lost Pet — Petlink" },
       { name: "description", content: "Report your lost pet and reach our community fast." },
     ],
   }),
@@ -72,3 +72,4 @@ function ReportLostPage() {
     </MainLayout>
   );
 }
+

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { MainLayout } from "@/layouts/MainLayout";
@@ -10,7 +10,7 @@ import { supabase, type HappyTail } from "@/lib/supabase";
 export const Route = createFileRoute("/happy-tails")({
   head: () => ({
     meta: [
-      { title: "Happy Tails — Reunion Stories | PawTrack" },
+      { title: "Happy Tails — Reunion Stories | Petlink" },
       {
         name: "description",
         content: "Heartwarming reunion stories from pets reunited with their families.",
@@ -44,10 +44,10 @@ function HappyTailsPage() {
   return (
     <MainLayout>
       <section className="relative overflow-hidden bg-cream py-16">
-        <div className="absolute left-10 top-10 text-4xl opacity-40">🐾</div>
-        <div className="absolute right-10 top-10 text-4xl opacity-40">🐾</div>
-        <div className="absolute left-20 bottom-6 text-4xl opacity-40">🐾</div>
-        <div className="absolute right-20 bottom-6 text-4xl opacity-40">🐾</div>
+        <div className="absolute left-10 top-10 text-4xl opacity-40">ðŸ¾</div>
+        <div className="absolute right-10 top-10 text-4xl opacity-40">ðŸ¾</div>
+        <div className="absolute left-20 bottom-6 text-4xl opacity-40">ðŸ¾</div>
+        <div className="absolute right-20 bottom-6 text-4xl opacity-40">ðŸ¾</div>
         <div className="mx-auto max-w-3xl px-4 text-center">
           <h1 className="text-5xl text-foreground">Happy Reunion Stories</h1>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
@@ -95,3 +95,4 @@ function HappyTailsPage() {
     </MainLayout>
   );
 }
+

@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { Heart } from "lucide-react";
 
 export function Footer() {
@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-2">
             <Heart className="h-6 w-6 text-white" />
-            <span className="text-lg font-extrabold">PawTrack</span>
+            <span className="text-lg font-extrabold">Petlink</span>
           </div>
           <p className="mt-3 max-w-xs text-sm text-white/75">
             Community-powered platform helping reunite lost pets with their families.
@@ -61,8 +61,9 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/15 py-5 text-center text-xs text-white/70">
-        © {new Date().getFullYear()} PawTrack. Made with love for pets and their families.
+        Â© {new Date().getFullYear()} Petlink. Made with love for pets and their families.
       </div>
     </footer>
   );
 }
+

@@ -1,4 +1,4 @@
-import { MapPin, Bell, ShieldCheck } from "lucide-react";
+﻿import { MapPin, Bell, ShieldCheck } from "lucide-react";
 
 const items = [
   {
@@ -32,7 +32,7 @@ export function HowItWorks() {
     <section className="bg-background py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl text-foreground">How PawTrack Works</h2>
+          <h2 className="text-4xl text-foreground">How Petlink Works</h2>
           <p className="mt-3 text-muted-foreground">
             Simple steps to help reunite pets with their families
           </p>
@@ -54,3 +54,4 @@ export function HowItWorks() {
     </section>
   );
 }
+
