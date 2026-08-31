@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, Video, MailCheck } from "lucide-react";
 import { MainLayout } from "@/layouts/MainLayout";
 import { ReportPetForm } from "@/components/pets/ReportPetForm";
@@ -6,7 +6,7 @@ import { ReportPetForm } from "@/components/pets/ReportPetForm";
 export const Route = createFileRoute("/found-pets")({
   head: () => ({
     meta: [
-      { title: "Found a Pet — PawTrack" },
+      { title: "Found a Pet — Petlink" },
       {
         name: "description",
         content:
@@ -65,3 +65,4 @@ function FoundPetsPage() {
     </MainLayout>
   );
 }
+

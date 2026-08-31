@@ -1,4 +1,4 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+﻿import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Heart } from "lucide-react";
 import { MainLayout } from "@/layouts/MainLayout";
@@ -7,10 +7,10 @@ import { supabase } from "@/lib/supabase";
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "Create Account — PawTrack" },
+      { title: "Create Account — Petlink" },
       {
         name: "description",
-        content: "Join PawTrack and help reunite lost pets with their families.",
+        content: "Join Petlink and help reunite lost pets with their families.",
       },
     ],
   }),
@@ -25,6 +25,7 @@ function RegisterPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [needsConfirmation, setNeedsConfirmation] = useState(false);
@@ -32,6 +33,17 @@ function RegisterPage() {
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError(null);
+
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
     setSubmitting(true);
 
     const { data, error: signUpError } = await supabase.auth.signUp({
@@ -67,7 +79,7 @@ function RegisterPage() {
 
     // With email confirmation switched on, signUp returns a user but no session.
     if (data.session) {
-      navigate({ to: "/profile" });
+      navigate({ to: "/" });
     } else {
       setNeedsConfirmation(true);
     }
@@ -77,7 +89,7 @@ function RegisterPage() {
     return (
       <MainLayout>
         <div className="mx-auto max-w-md px-4 py-20 text-center">
-          <h1 className="text-3xl text-foreground">Check your email 📩</h1>
+          <h1 className="text-3xl text-foreground">Check your email ðŸ“©</h1>
           <p className="mt-3 text-muted-foreground">
             We sent a confirmation link to <span className="font-semibold">{email}</span>. Confirm
             your address, then sign in to report a lost pet.
@@ -100,18 +112,18 @@ function RegisterPage() {
           <span className="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-primary">
             <Heart className="h-6 w-6 fill-white text-white" />
           </span>
-          <h1 className="mt-4 text-4xl text-foreground">Join PawTrack</h1>
+          <h1 className="mt-4 text-4xl text-foreground">Join Petlink</h1>
           <p className="mt-2 text-muted-foreground">Create your account to start helping pets</p>
         </div>
         <form
           onSubmit={handleSubmit}
           className="mx-auto mt-8 max-w-md rounded-2xl border border-border bg-card p-7 shadow-sm"
         >
-          <label className="block text-sm font-semibold">Full Name</label>
+          <label className="block text-sm font-semibold">Username</label>
           <input
             required
             className={inputCls}
-            placeholder="Jane Doe"
+            placeholder="username"
             value={fullName}
             onChange={(event) => setFullName(event.target.value)}
           />
@@ -134,6 +146,15 @@ function RegisterPage() {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
+          <label className="mt-4 block text-sm font-semibold">Confirm Password</label>
+          <input
+            type="password"
+            required
+            className={inputCls}
+            placeholder="Confirm your password"
+            value={confirmPassword}
+            onChange={(event) => setConfirmPassword(event.target.value)}
+          />
           {error ? <p className="mt-4 text-sm text-destructive">{error}</p> : null}
           <button
             disabled={submitting}
@@ -152,3 +173,4 @@ function RegisterPage() {
     </MainLayout>
   );
 }
+

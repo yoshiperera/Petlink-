@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { Search, Plus } from "lucide-react";
@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/lost-pets")({
   head: () => ({
     meta: [
-      { title: "Lost Pets — PawTrack" },
+      { title: "Lost Pets — Petlink" },
       {
         name: "description",
         content: "Browse recently reported lost pets and help bring them home.",
@@ -154,7 +154,7 @@ function LostPetsPage() {
           <ul className="mt-4 grid gap-2 sm:grid-cols-2">
             {tips.map((t) => (
               <li key={t} className="flex gap-2 text-sm text-foreground/80">
-                <span className="text-primary">•</span>
+                <span className="text-primary">â€¢</span>
                 <span>{t}</span>
               </li>
             ))}
@@ -164,3 +164,4 @@ function LostPetsPage() {
     </MainLayout>
   );
 }
+

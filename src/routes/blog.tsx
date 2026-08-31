@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute } from "@tanstack/react-router";
 import { MainLayout } from "@/layouts/MainLayout";
 import { BlogCard, type BlogPost } from "@/components/blog/BlogCard";
 import { Newsletter } from "@/components/blog/Newsletter";
@@ -42,7 +42,7 @@ const posts: BlogPost[] = [
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Blog — Pet Care, Tips & Stories | PawTrack" },
+      { title: "Blog — Pet Care, Tips & Stories | Petlink" },
       {
         name: "description",
         content: "Articles, guides, and tips for pet owners and community members.",
@@ -72,3 +72,4 @@ function BlogPage() {
     </MainLayout>
   );
 }
+

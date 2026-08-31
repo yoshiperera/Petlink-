@@ -1,11 +1,11 @@
-export function About() {
+﻿export function About() {
   return (
     <section className="bg-blue-brand/40 py-16">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
         <div>
           <h2 className="text-4xl text-foreground">About Us</h2>
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            PawTrack is a community-powered platform designed to help reunite lost pets with their
+            Petlink is a community-powered platform designed to help reunite lost pets with their
             families. With easy reporting tools, real-time updates, and a caring network, we make it
             simple to connect pet owners with those who've found their furry friends because every
             pawprint matters.
@@ -23,3 +23,4 @@ export function About() {
     </section>
   );
 }
+

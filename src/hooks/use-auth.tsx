@@ -27,7 +27,11 @@ export function useAuth() {
   }, []);
 
   const signOut = async () => {
-    await supabase.auth.signOut();
+    // "local" only clears this browser's session. The default "global" scope
+    // also asks Supabase to revoke the session server-side, which 403s (and
+    // can leave the user stuck logged in) once that session has already
+    // expired or been removed - and we don't need the server round-trip anyway.
+    await supabase.auth.signOut({ scope: "local" });
   };
 
   return { user, loading, signOut };

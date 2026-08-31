@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+﻿import { Heart } from "lucide-react";
 import { useState } from "react";
 
 export function CTA() {
@@ -7,7 +7,7 @@ export function CTA() {
     <section className="bg-gradient-to-b from-accent to-accent/60 py-16">
       <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
         <Heart className="mx-auto h-10 w-10 text-primary" />
-        <h2 className="mt-4 text-3xl text-foreground">Stay Updated with PawTrack Stories</h2>
+        <h2 className="mt-4 text-3xl text-foreground">Stay Updated with Petlink Stories</h2>
         <p className="mt-3 text-muted-foreground">
           Get the latest success stories, tips, and updates delivered to your inbox. Join our
           community of pet lovers making a difference.
@@ -38,3 +38,4 @@ export function CTA() {
     </section>
   );
 }
+

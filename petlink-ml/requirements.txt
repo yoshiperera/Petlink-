@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+supabase
+httpx
+torch
+torchvision
+ultralytics
+opencv-python
+pillow
+numpy
+resend

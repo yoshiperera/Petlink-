@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { User, Heart, PawPrint, Pencil, PartyPopper } from "lucide-react";
@@ -10,8 +10,8 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/profile")({
   head: () => ({
     meta: [
-      { title: "Profile — PawTrack" },
-      { name: "description", content: "Your PawTrack profile and pet reports." },
+      { title: "Profile — Petlink" },
+      { name: "description", content: "Your Petlink profile and pet reports." },
     ],
   }),
   component: ProfilePage,
@@ -68,7 +68,7 @@ function ProfilePage() {
         breed: report.breed,
         color: report.color,
         photo_url: report.photo_url,
-        story: `${report.pet_name || "This pet"} made it home safely. Thank you PawTrack community!`,
+        story: `${report.pet_name || "This pet"} made it home safely. Thank you Petlink community!`,
         source_report_id: report.id,
       });
       if (insertError) throw insertError;
@@ -268,7 +268,7 @@ function ProfilePage() {
                         {report.pet_name || "Unnamed pet"}
                       </h3>
                       <p className="mt-1 text-xs text-muted-foreground">
-                        {[report.pet_type, report.breed, report.color].filter(Boolean).join(" • ")}
+                        {[report.pet_type, report.breed, report.color].filter(Boolean).join(" â€¢ ")}
                       </p>
                       {report.location ? (
                         <p className="mt-1 text-xs text-muted-foreground">{report.location}</p>
@@ -308,3 +308,4 @@ function ProfilePage() {
     </MainLayout>
   );
 }
+
