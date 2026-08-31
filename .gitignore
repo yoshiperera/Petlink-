@@ -1,4 +1,3 @@
 node_modules
 petlink-ml/venv
-dist
-.tanstack
+petlink-ml/.env

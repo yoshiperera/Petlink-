@@ -1,0 +1,1 @@
+import{d as e}from"./link-CikX7WhY.js";import{t}from"./MainLayout-CPy-spkR.js";import{t as n}from"./ReportPetForm-CeU2Cj2f.js";var r=e(),i=()=>(0,r.jsx)(t,{children:(0,r.jsx)(n,{kind:`found`})});export{i as component};
