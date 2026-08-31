@@ -9,11 +9,6 @@ venv\Scripts\activate
 uvicorn main:app --reload --port 8000
 
 
-# PetLink
-
-## Overview
-Brief description — AI-powered lost and found pet reunification system 
-using image-to-video matching.
 
 ## Features
 - Owner registration and Lost Pet Report management
@@ -35,6 +30,11 @@ petlink web app/
 │   ├── ml.py              # Matching logic
 │   └── requirements.txt
 └── README.md
+
+
+
+
+
 
 ## Setup Instructions
 
@@ -61,5 +61,4 @@ uvicorn main:app --reload
 - POST /embed-lost/{report_id} — generate embedding for a Lost Pet Report
 - POST /match-found/{report_id} — trigger matching for a Found Pet Report
 
-## License / Author
-[Your name], Final Year Project, [University name]
+
